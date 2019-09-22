@@ -1,0 +1,5 @@
+# Autodetect text files
+* text=auto eol=lf
+
+# Make sure these are detected as text files
+*.book text

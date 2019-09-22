@@ -1,0 +1,12 @@
+{
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+
+    "C_Cpp.default.cppStandard": "c++14",
+
+    "code-runner.executorMap": {
+        "c": "cd \"$workspaceRoot\" && wsl make compile && wsl make run",
+        "cpp": "cd \"$workspaceRoot\" && wsl make compile && wsl make run"
+    },
+    "code-runner.runInTerminal": true
+}

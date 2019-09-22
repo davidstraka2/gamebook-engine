@@ -1,0 +1,102 @@
+Name: Hello Book
+
+Skill points: 50
+
+Player:
+	Location: Meadow 1
+	Inventory size: 3
+
+Locations:
+	Meadow 1:
+		Text:
+			You find yourself in the middle of a green meadow.
+			You see a forest to your right and a mountain to your left.
+		Options:
+			-:
+				Text: Proceed right, towards the forest.
+				Action: goto
+				Target: Meadow R1
+			-:
+				Text: Proceed left, towards the mountain.
+				Action: goto
+				Target: Meadow L1
+	Meadow R1:
+		Options:
+			-:
+				Text: Go back.
+				Action: goto
+				Target: Meadow 1
+			-:
+				Text: Proceed into the forest.
+				Action: goto
+				Target: Forest
+	Forest:
+		Text:
+			You have reached the forest.
+			You've been ambushed by a rogue!
+		Creatures:
+			Rogue:
+				Dexterity: 12
+				Strength: 8
+				Vitality: 10
+		Options
+			-:
+				Text: Fight!
+				Action: fight
+				Target: Rogue
+				Win action: end
+	Meadow L1:
+		Options:
+			-:
+				Text: Go back.
+				Action: goto
+				Target: Meadow 1
+			-:
+				Text: Proceed further towards the mountain.
+				Action: goto
+				Target: Meadow L2
+	Meadow L2:
+		Text:
+			You are near the mountain base.
+		Options:
+			-:
+				Text: Proceed further towards the mountain.
+				Action: goto
+				Target: Mountain Base
+	Mountain Base:
+		Text:
+			You have reached the mountain base.
+			A big ugly ogre looks down upon your little head whilst salivating.
+			It's about to eat you alive!
+		Creatures:
+			Ogre:
+				Dexterity: 8
+				Strength: 12
+				Vitality: 10
+				Loot:
+					Sword:
+						Dexterity: 1
+						Strength: 2
+						Vitality: -1
+		Options:
+			-:
+				Text: Fight for your life!
+				Action: fight
+				Target: Ogre
+				Win action: goto
+				Win target: Mountain Cave
+	Mountain Cave:
+		Text:
+			You have finally reached the end.
+			All that's left is a boss fight!
+		Creatures:
+			Ogre Boss:
+				Dexterity: 10
+				Strength: 14
+				Vitality: 12
+		Options:
+			-:
+				Text: Fight for the victory!
+				Action: fight
+				Target: Ogre Boss
+				Win action: end

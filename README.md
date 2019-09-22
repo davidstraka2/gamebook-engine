@@ -26,7 +26,7 @@ ends when the hero dies or reaches the end (or one of the ends). Progress can be
 saved into a save file.
 
 It was required for the source code to be rougly within the range of 1k to 3k
-characters. It must be properly formatted and commented. It must be written in
+lines. It must be properly formatted and commented. It must be written in
 C/C++ (C++ version <= 14), and use g++ and make for compilation. It must show
 off OOP principles and some form of polymorphism (excluding function overloading
 and a couple other types). Compilation must be error and warning free. There
@@ -86,3 +86,7 @@ Inside WSL, you need the Linux commands listed in the previous section.
 Other than that, there should be nothing Windows specific in the repo. If you
 delete the .vscode folder, or don't use VSCode at all, everything should work
 on standard Linux distros.
+
+## License
+
+[MIT](LICENSE)

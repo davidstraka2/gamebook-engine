@@ -34,7 +34,7 @@ void newGame() {;
             throw InvalidBookName();
         // Open and parse book
         tell("Opening " + bookName);
-        World world("examples/" + bookName);
+        World world("books/" + bookName);
         // Have player create their hero
         tell("Book successfully opened. Let's go create your hero!");
         world.createHero();

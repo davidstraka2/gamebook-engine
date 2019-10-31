@@ -55,11 +55,9 @@ Run `make compile` to recompile, `make doc` to remake documentation, or
 
 This repository is set up to work on Windows 10 with WSL. Program was
 successfully compiled and run on openSUSE 15 (gcc 7.4), Debian 9.7 (gcc 6.3),
-and Windows 10 WSL openSUSE 15 (gcc 7.4); all x64.
+Ubuntu 18.04 (gcc 7.4) and Windows 10 WSL openSUSE 15 (gcc 7.4); all x64.
 
 **All files must use LF for EOL.**
-
-After compilation, there should be no dependencies.
 
 ### Used Linux commands
 
@@ -68,11 +66,14 @@ addition to these you need `make` itself of course.
 
 ### Libraries
 
-In addition to the STL, `ncurses` is used.
+In addition to the standard C/C++ libraries, `ncurses` is used.
 
 **Depending on your system, either `#include <ncurses/menu.h>` or
 `#include <menu.h>` need to be used in `src/io.cpp` (the former is used by
-default on line 11).**
+default).**
+
+If you intend to link ncurses statically, uncomment LDD_FLAGS in the "Static
+linker" section of Makefile.
 
 ### Used Windows commands
 
@@ -85,6 +86,11 @@ Inside WSL, you need the Linux commands listed in the previous section.
 Other than that, there should be nothing Windows specific in the repo. If you
 delete the .vscode folder, or don't use VSCode at all, everything should work
 on standard Linux distros.
+
+## Links
+
+- [Repository](https://github.com/davidstraka2/gamebook-engine)
+- [Releases](https://github.com/davidstraka2/gamebook-engine/releases)
 
 ## License
 

@@ -8,6 +8,11 @@ CXX ?= g++
 CXX_FLAGS ?= -std=c++14 -Wall -pedantic -Wextra -Wno-long-long -O0 -g -ggdb
 LDD_FLAGS ?= -lmenu -lncurses -ltinfo
 
+## Static linker
+#LDD_FLAGS = -static -l:libmenu.a -l:libncurses.a -l:libtinfo.a -l:libdl.a \
+#	-l:libgpm.a
+# Uncomment this if you want to link ncurses statically
+
 ## System commands
 MKDIR ?= mkdir
 MKDIR_FLAGS ?= -p
